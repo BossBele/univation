@@ -1,11 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from "../styles/Home.module.css";
-import {EventsComponent, HeaderBar} from "../components/Embeds";
+import {HeaderBar, NewsComponent} from "../components/Embeds";
 import Footer from "../components/footer";
-import {dummyEvents} from "../components/dummyData";
+import {dummyNews} from "../components/dummyData";
 
-const Events = () => {
+const News = () => {
     const [footer, setShowFooter] = React.useState(false);
 
     const toggleFooter = () => {
@@ -22,13 +21,11 @@ const Events = () => {
                     <Footer/>
                 </div>
             }
-            <div className="d-flex justify-content-center col-lg-9 col-sm-12 align-items-center flex-column align-self-center">
-                <div className="col-lg-7 col-sm-12 my-4"><h1 className="fw-bolder">OCR Events</h1></div>
+            <div
+                className="d-flex justify-content-center col-lg-9 col-sm-12 align-items-center flex-column align-self-center">
+                <div className="col-lg-7 col-sm-12 my-4"><h1 className="fw-bolder">News</h1></div>
                 <div className="col-lg-12 mb-3">
-                    <h3><strong>Stay Tuned for More on Upcoming Fall Events</strong></h3>
-                    <div>
-                        <EventsComponent events={dummyEvents} />
-                    </div>
+                    <NewsComponent news={dummyNews} />
                 </div>
 
 
@@ -38,4 +35,4 @@ const Events = () => {
     );
 }
 
-export default Events;
+export default News;
