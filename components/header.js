@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from '../styles/Home.module.css';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faSearch} from "@fortawesome/free-solid-svg-icons";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import {HeaderBar} from "./Embeds";
@@ -61,10 +59,10 @@ class Header extends React.Component {
                         responsive={responsive}
                         ssr={true} // means to render carousel on server-side.
                         infinite={true}
-                        autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                        autoPlay={this.props.deviceType !== "mobile"}
                         autoPlaySpeed={7000}
                         keyBoardControl={true}
-                        customTransition="all .5"
+                        customTransition="transform 500ms ease-in-out"
                         transitionDuration={500}
                         className="mx-lg-3"
                         containerClass="carousel-container"
